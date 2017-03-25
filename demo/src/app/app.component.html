@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Angular2 UEditor</h1>
+  <hr>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">基本(双向数据绑定)</h3>
+    </div>
+    <div class="panel-body">
+      <ng2-ueditor [(ngModel)]="content1"></ng2-ueditor>
+
+      <div class="mt15">
+        <span class="text-danger"><strong>编辑器信息(HTML)：</strong></span>
+        <textarea [value]="content1" rows="5" style="width: 100%;" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">自定义配置项</h3>
+    </div>
+    <div class="panel-body">
+      <ng2-ueditor [(ngModel)]="content2" [setting]="setting"></ng2-ueditor>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">事件</h3>
+    </div>
+    <div class="panel-body">
+      <ng2-ueditor [(ngModel)]="content3" (onValueChange)="onValueChange($event)"></ng2-ueditor>
+    </div>
+  </div>
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">方法</h3>
+    </div>
+    <div class="panel-body">
+      <button type="button" class="btn btn-primary" style="margin-bottom: 10px;" (click)="printInfo()">打印信息</button>
+
+      <ng2-ueditor #ueditor [(ngModel)]="content4"></ng2-ueditor>
+    </div>
+  </div>
+
+</div>
